@@ -1,0 +1,49 @@
+{
+  "name": "otaku-db",
+  "description": "Database core for the Otaku projects.",
+  "version": "0.0.1-alpha.2",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/otakumono/otaku-db.git"
+  },
+  "author": {
+    "name": "Robbie Lodico",
+    "email": "lodico.rj@gmail.com",
+    "url": "http://pandacoder.info"
+  },
+  "homepage": "https://github.com/otakumono",
+  "bugs": {
+    "url": "https://github.com/otakumono/otaku-db/issues"
+  },
+  "licenses": [
+    {
+      "type": "GNU GPL v3",
+      "url": "https://github.com/otakumono/otaku-db/blob/master/LICENSE"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Robbie Lodico",
+      "email": "lodico.rj@gmail.com",
+      "url": "http://pandacoder.net"
+    }
+  ],
+  "engines": {
+    "node": "^0.10.33"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "nodemon -x node otaku_db.js -e js,json -i \"otaku.*.json\" -i \"test/**.*\" -i \"security/**.*\" -i \"(.git*|.tra*|LICENSE*|README*)\" -i \"public/**.*\"",
+    "test-travis": ""
+  },
+  "dependencies": {
+    "node-xport": ">= 0.2.0",
+    "mongoose": "^3.8.12"
+  },
+  "devDependencies": {
+    "debug": "~0.7.2",
+    "nodemon": "~1.2.1",
+    "supertest": "~0.14.0"
+  }
+}
