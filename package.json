@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "node-xport": ">= 0.2.0",
+    "otaku-core": "*",
     "mongoose": "^3.8.12"
   },
   "devDependencies": {
