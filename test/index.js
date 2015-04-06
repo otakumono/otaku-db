@@ -1,6 +1,6 @@
 var xport = require('node-xport')(module),
-	OtakuCore = require('otaku-core'),
-	OtakuDB = require('../');
+    OtakuCore = require('otaku-core'),
+    OtakuDB = require('../');
 
 function DBTest() {}
 
