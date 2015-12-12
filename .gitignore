@@ -1,3 +1,5 @@
+*.otaku.json
+
 # Logs
 logs
 *.log

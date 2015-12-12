@@ -1,9 +1,12 @@
 var xport = require('node-xport')(module),
-    OtakuDB = require('./lib/'),
-    OtakuCore = OtakuDB.OtakuCore;
+    commander = require('commander'),
+    Database = require('./lib/database');
 
-OtakuDB.prepare();
-OtakuDB.run();
+commander
+    .version('0.0.1')
+    .option('-c, --config [type]', 'Use the specified configuration file [db.otaku.json]', 'db.otaku.json')
+    .parse(process.argv);
 
-/* Export the module */
-xport(OtakuDB);
+var database = Database.load(commander.config);
+
+database.connect();

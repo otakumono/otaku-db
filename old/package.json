@@ -42,8 +42,7 @@
     "node-xport": ">= 0.2.0",
     "otaku-core": "otakumono/otaku-core",
     "mongoose": "~4.0.1",
-    "restify": "^2.8.3",
-    "commander": "~2.8.1"
+    "restify": "^2.8.3"
   },
   "devDependencies": {
     "debug": "~0.7.2",
