@@ -6,6 +6,6 @@ var xport = require('node-xport')(module),
 var LanguageStringSet = mongoose.Schema({
     type: { type: String, required: true },
     entries: { type: Object, required: true }
-});
+}, { _id: false });
 
 xport(LanguageStringSet);

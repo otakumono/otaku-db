@@ -1,4 +1,4 @@
-var xport = require('node-xport'),
+var xport = require('node-xport')(module),
     Language = require('./language'),
     LanguageStringSet = require('./languageStringSet'),
     Media = require('./media'),
@@ -6,7 +6,8 @@ var xport = require('node-xport'),
     Person = require('./person'),
     RecordInfo = require('./recordInfo'),
     Service = require('./service'),
-    ServiceRef = require('./serviceRef');
+    ServiceRef = require('./serviceRef'),
+    Translation = require('./translation');
 
 var Schemata = {
     "Language": Language,
@@ -16,7 +17,8 @@ var Schemata = {
     "Person": Person,
     "RecordInfo": RecordInfo,
     "Service": Service,
-    "ServiceRef": ServiceRef
+    "ServiceRef": ServiceRef,
+    "Translation": Translation
 };
 
 xport(Schemata);

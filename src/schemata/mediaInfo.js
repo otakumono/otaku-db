@@ -7,7 +7,7 @@ var MediaInfo = mongoose.Schema({
     producer: [{ type: mongoose.Schema.ObjectId, ref: 'Person' }],
     publisher: [{ type: mongoose.Schema.ObjectId, ref: 'Person' }],
     animator: [{ type: mongoose.Schema.ObjectId, ref: 'Person' }],
-    publisher: [{ type: mongoose.Schema.ObjectId, ref: 'Person' }]
-});
+    studio: [{ type: mongoose.Schema.ObjectId, ref: 'Person' }]
+}, { _id: false });
 
 xport(MediaInfo);

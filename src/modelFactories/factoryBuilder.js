@@ -1,8 +1,10 @@
-var xport = require('node-xport');
+var xport = require('node-xport')(module);
 
 var FactoryBuilder = {
     create: function (schema, defaultName, defaultCollection) {
         return {
+            instances: [],
+            instanceMap: {},
             create: function (connection, name, collection) {
                 name = (name || defaultName);
                 collection = (collection || defaultCollection);

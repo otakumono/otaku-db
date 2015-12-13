@@ -1,12 +1,12 @@
 var xport = require('node-xport')(module),
     mongoose = require('mongoose'),
     RecordInfo = require('./recordInfo'),
-    ServiceRef = require('./serviceRef');
+    Translation = require('./translation');
 
 var Service = mongoose.Schema({
-    name: { type: Object, required: true },
+    name: [ Translation ],
     address: { type: String, required: true },
     recordInfo: { type: RecordInfo, required: true }
-});
+}, { collection: 'services' });
 
 xport(Service);

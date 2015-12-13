@@ -1,16 +1,17 @@
 var xport = require('node-xport')(module),
     mongoose = require('mongoose'),
+    MediaInfo = require('./mediaInfo'),
     RecordInfo = require('./recordInfo'),
-    ServiceRef = require('./serviceRef');
+    ServiceRef = require('./serviceRef'),
+    Translation = require('./translation');
 
 var Media = mongoose.Schema({
     type: { type: Number, required: true },
-    name: { type: Object, required: true },
-    info: { type: MediaInfo, required: true },
+    name: [ Translation ],
     works: [{ type: mongoose.Schema.ObjectId, ref: 'Media' }],
-    occupations: [{ type: Number }],
-    services: [{ type: ServiceRef }],
+    occupations: [ Number ],
+    services: [ ServiceRef ],
     recordInfo: { type: RecordInfo, required: true }
-});
+}, { collection: 'people'});
 
 xport(Media);

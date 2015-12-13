@@ -1,4 +1,4 @@
-var xport = require('node-xport'),
+var xport = require('node-xport')(module),
     Language = require('./language'),
     LanguageStringSet = require('./languageStringSet'),
     Media = require('./media'),

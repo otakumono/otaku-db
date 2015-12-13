@@ -1,9 +1,5 @@
 var xport = require('node-xport')(module),
-	OtakuDB = require('./lib/'),
-	OtakuCore = OtakuDB.OtakuCore;
-
-OtakuDB.prepare();
-OtakuDB.run();
+    Database = require('./src');
 
 /* Export the module */
-xport(OtakuDB);
+xport(Database);
